@@ -1,16 +1,15 @@
-import { useTranslation } from "react-i18next";
+import "./App.css";
 import "./utils/i18n";
+import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const { t } = useTranslation();
-
-  return (
-      <>
-          <Navbar></Navbar>
-          <h2>{t("Welcome to React")}</h2>
-      </>
-  );
+    return (
+        <>
+            <Navbar/>
+            <Hero></Hero>
+        </>
+    );
 }
 
 export default App;

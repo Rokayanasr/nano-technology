@@ -1,3 +1,10 @@
 {
-  "Welcome to React": "Welcome to React and react-i18next"
+   "Logo name": "Nano",
+  "Logo description": "Technical solutions",
+  "Welcome to Nano Technology": "smart technological systems<br />and marketing solutions ",
+  "About Us": "About Us",
+  "Contact Us": "Contact Us",
+  "Services": "Services",
+  "Subscribe": "Subscribe",
+  "Hero Small Title": "Increase your sales and grow your business"
 }

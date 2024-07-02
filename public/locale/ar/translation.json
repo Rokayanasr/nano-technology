@@ -1,3 +1,21 @@
 {
-  "Welcome to React": "اهلا بك في رياكت اي 18 نيكست"
+  "Logo name": "نانــو",
+  "Logo description": "للحلــول التقنيــة",
+  "Welcome to Nano Technology": "بأنظمةٍ تقنيةٍ ذكيةٍ <br /> وحلـــولٍ تسويقيــة",
+  "About Us": "من نحن",
+  "Contact Us": "تواصل معنا",
+  "Services": "الحلول و الخدمات",
+  "Subscribe": "احجز استشارتك",
+  "Hero Small Title": "زوّد مبيعاتك وطور أعمالك",
+  "Hero Btn": "استفد من خدماتنا الآن",
+  "Consultancy Title": "ما تأخر من بدأ، لا تضيع فرصتك وطوّر عملك!",
+  "Consultancy Small Title": "عالم الأعمال لا يوجد مجالٌ للصدفة، وعليك أن توظف كل التفاصيل من أجل تطوير عملك ونحن هنا لمساعدتك",
+  "Consultancy Start": "بداية مــن",
+  "Consultancy Start description": "بناء الخطة التسويقية وإدارة حسابات التواصل الاجتماعي",
+  "Consultancy Through": "مروراً بـ",
+  "Consultancy Through description": "تصميم موقعك وتطبيقك وبناء نظام عمل ذكي",
+  "Consultancy End": "وصولاً الــي",
+  "Consultancy End description": "النتائــج التي تبحث عنها و المستوي الذي تسعــي اليـــه",
+  "Consultancy Btn": "اطلب استشارتك المجانية الآن!"
+
 }
