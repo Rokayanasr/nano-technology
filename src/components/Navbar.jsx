@@ -5,7 +5,7 @@ import "../App.css";
 import { useTranslation } from "react-i18next";
 import "../utils/i18n";
 import { Link } from "react-router-dom";
-
+import logo from '../assets/logo.png'
 function Navbar() {
     const { t } = useTranslation();
 
@@ -27,7 +27,7 @@ function Navbar() {
             <nav className='bg-opacity-15 md:bg-opacity-15 my-container backdrop-blur-lg bg-white z-20 fixed w-full shadow-lg ring-1 ring-black/5'>
                 <div className='max-w-screen-xl flex flex-wrap items-center justify-between'>
                     <Link to='' className='flex items-center space-x-3 rtl:space-x-reverse'>
-                        <img src='../../src/assets/logo.png' className='h-12 sm:h-14' alt='project 12 Logo' />
+                        <img src={logo} className='h-12 sm:h-14' alt='project 12 Logo' />
                         <span className='flex flex-col gap-1.5 logo-hide'>
                             <span className=' text-white logo-nav uppercase'>{t("Logo name")}</span>
                             <span className='text-white text-opacity-70 text-sm font-thin logo-title uppercase'>{t("Logo description")}</span>
