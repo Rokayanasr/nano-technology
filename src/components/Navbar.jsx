@@ -44,6 +44,7 @@ function Navbar() {
                         </button>
 
                         <button
+                            data-collapse-toggle='navbar-language'
                             type='button'
                             className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:ring-1 focus:outline-none ring-white'
                             aria-controls='navbar-language'
