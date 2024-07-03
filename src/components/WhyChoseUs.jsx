@@ -34,7 +34,7 @@ function WhyChoseUs() {
                         </div>
                         <div className='flex gap-4 justify-between'>
                             <svg xmlns='http://www.w3.org/2000/svg' className='w-6' width='35' height='35' viewBox='0 0 35 35' fill='none'>
-                                <g clip-path='url(#clip0_1_254)'>
+                                <g clipPath='url(#clip0_1_254)'>
                                     <path
                                         d='M2.64172 9.89299L9.89237 2.64235L8.68379 1.43377C6.68481 -0.565208 3.43213 -0.565208 1.43341 1.43404C0.464898 2.40229 -0.0683594 3.68964 -0.0683594 5.05923C-0.0683594 6.42856 0.464898 7.71617 1.43341 8.68442L2.64172 9.89299Z'
                                         fill='#b8aff0'
