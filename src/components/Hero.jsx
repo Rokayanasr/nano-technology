@@ -1,9 +1,19 @@
 import { Trans, useTranslation } from "react-i18next";
 import "../App.css";
 import Navbar from "./Navbar";
+import aboutImg from "../assets/about.png";
+import resultImg from "../assets/results.png";
 
 function Hero() {
     const { t, i18n } = useTranslation();
+    const cardsData = t("Cards", { returnObjects: true });
+    console.log("cardsData:", cardsData); // Debugging output
+
+    // Check if cardsData is an array before mapping
+    if (!Array.isArray(cardsData)) {
+        console.error("cardsData is not an array:", cardsData);
+        return null; // Or handle the error gracefully
+    }
 
     return (
         <>
@@ -28,7 +38,7 @@ function Hero() {
                     <ol className='items-center mt-14 mb-10 md:mt-8 justify-center flex flex-col md:flex-row gap-2'>
                         <li className='relative mb-6 sm:mb-0'>
                             <div className='flex items-center justify-center md:justify-start'>
-                                <div className='z-10 flex items-center justify-center w-6 h-6 bg-white rounded-full ring-0 ring-white '>
+                                <div className='z-1 flex items-center justify-center w-6 h-6 bg-white rounded-full ring-0 ring-white '>
                                     <svg className='w-3.5 h-3.5 text-primary' fill='currentColor' viewBox='-64 0 512 512.001' xmlns='http://www.w3.org/2000/svg' id='fi_1154571'>
                                         <path d='m119.433594 110.335938h144.601562.019532c8.285156 0 15-6.71875 15-15 0-1.300782-.164063-2.558594-.472657-3.757813l-15.90625-79.519531c-1.402343-7.011719-7.558593-12.058594-14.707031-12.058594h-112.46875c-7.148438 0-13.304688 5.046875-14.707031 12.058594l-16.066407 80.335937c-.882812 4.40625.261719 8.972657 3.109376 12.449219 2.847656 3.476562 7.105468 5.492188 11.597656 5.492188zm0 0'></path>
                                         <path d='m328.300781 64.265625h-24.589843l4.167968 20.84375c.78125 3.347656 1.175782 6.78125 1.175782 10.226563 0 24.8125-20.1875 45-45.019532 45h-144.601562c-13.535156 0-26.21875-6.003907-34.796875-16.46875-8.582031-10.46875-11.984375-24.085938-9.328125-37.355469l4.449218-22.242188h-24.589843c-30.417969 0-55.167969 24.746094-55.167969 55.164063v337.402344c0 30.417968 24.75 55.164062 55.167969 55.164062h273.132812c30.417969 0 55.167969-24.746094 55.167969-55.164062v-337.402344c0-30.417969-24.75-55.167969-55.167969-55.167969zm-232.964843 111.398437h112.464843c8.285157 0 15 6.71875 15 15 0 8.285157-6.714843 15-15 15h-112.464843c-8.285157 0-15-6.714843-15-15 0-8.28125 6.714843-15 15-15zm14.996093 95.332032c0 3.949218-1.601562 7.820312-4.390625 10.609375-2.789062 2.789062-6.660156 4.390625-10.609375 4.390625-3.941406 0-7.8125-1.601563-10.601562-4.390625-2.789063-2.789063-4.390625-6.660157-4.390625-10.609375 0-3.949219 1.601562-7.808594 4.390625-10.601563 2.789062-2.796875 6.660156-4.398437 10.601562-4.398437 3.949219 0 7.820313 1.601562 10.609375 4.398437 2.789063 2.792969 4.390625 6.652344 4.390625 10.601563zm-4.390625 171.28125c-2.789062 2.789062-6.660156 4.386718-10.601562 4.386718-3.949219 0-7.820313-1.597656-10.609375-4.386718-2.789063-2.800782-4.398438-6.660156-4.398438-10.613282 0-3.945312 1.609375-7.808593 4.398438-10.605468 2.789062-2.792969 6.660156-4.394532 10.609375-4.394532 3.941406 0 7.8125 1.601563 10.601562 4.394532 2.789063 2.796875 4.390625 6.660156 4.390625 10.605468 0 3.953126-1.601562 7.8125-4.390625 10.613282zm0-80.339844c-2.789062 2.796875-6.660156 4.398438-10.609375 4.398438-3.941406 0-7.8125-1.601563-10.601562-4.398438-2.800781-2.792969-4.398438-6.652344-4.398438-10.601562 0-3.949219 1.597657-7.820313 4.398438-10.609376 2.789062-2.789062 6.660156-4.390624 10.601562-4.390624 3.949219 0 7.820313 1.601562 10.609375 4.390624 2.789063 2.789063 4.398438 6.660157 4.398438 10.609376 0 3.941406-1.609375 7.8125-4.398438 10.601562zm182.191406 84.726562h-112.464843c-8.285157 0-15-6.714843-15-15 0-8.28125 6.714843-15 15-15h112.464843c8.285157 0 15 6.71875 15 15 0 8.285157-6.714843 15-15 15zm0-80.332031h-112.464843c-8.285157 0-15-6.714843-15-15 0-8.28125 6.714843-15 15-15h112.464843c8.285157 0 15 6.71875 15 15 0 8.285157-6.714843 15-15 15zm0-80.332031h-112.464843c-8.285157 0-15-6.714844-15-15s6.714843-15 15-15h112.464843c8.285157 0 15 6.714844 15 15s-6.714843 15-15 15zm0 0'></path>
@@ -37,17 +47,17 @@ function Hero() {
                                 <div className='hidden sm:flex w-full consultancy-line' />
                             </div>
                             <div className='mt-3 sm:pe-8'>
-                                <time className='block text-center md:text-start mb-2 font-normal leading-none text-white'>
+                                <time className='block text-center md:text-start mb-5 md:mb-2 font-normal leading-none text-white'>
                                     <Trans>{t("Consultancy Start")}</Trans>
                                 </time>
-                                <p className='md:font-thin text-indigo-200'>
+                                <p className='md:font-normal text-white opacity-70 text-center md:text-start'>
                                     <Trans>{t("Consultancy Start description")}</Trans>
                                 </p>
                             </div>
                         </li>
                         <li className='relative mb-6 sm:mb-0'>
                             <div className='flex items-center justify-center'>
-                                <div className='z-10 flex items-center justify-center w-6 h-6 bg-white rounded-full ring-0 ring-white '>
+                                <div className='z-1 flex items-center justify-center w-6 h-6 bg-white rounded-full ring-0 ring-white '>
                                     <svg id='fi_2282198' className='w-3.5 h-3.5 text-primary' fill='currentColor' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
                                         <path d='m512 121v-75c0-24.813-20.187-45-45-45h-422c-24.813 0-45 20.187-45 45v75zm-166-60h90c8.284 0 15 6.716 15 15s-6.716 15-15 15h-90c-8.284 0-15-6.716-15-15s6.716-15 15-15zm-150 0c8.284 0 15 6.716 15 15s-6.716 15-15 15-15-6.716-15-15 6.716-15 15-15zm-60 0c8.284 0 15 6.716 15 15s-6.716 15-15 15-15-6.716-15-15 6.716-15 15-15zm-60 0c8.284 0 15 6.716 15 15s-6.716 15-15 15-15-6.716-15-15 6.716-15 15-15z'></path>
                                         <path d='m0 151v315c0 24.813 20.187 45 45 45h422c24.813 0 45-20.187 45-45v-315zm175.37 213.287c6.47 5.175 7.518 14.614 2.343 21.083-5.174 6.468-14.615 7.518-21.083 2.342l-75-60c-7.499-5.997-7.504-17.424 0-23.426l75-60c6.466-5.175 15.907-4.127 21.083 2.342 5.175 6.469 4.127 15.909-2.343 21.083l-60.358 48.289zm139.417-147.378-90 210c-3.263 7.613-12.079 11.143-19.696 7.878-7.614-3.263-11.142-12.082-7.878-19.696l90-210c3.264-7.614 12.082-11.141 19.696-7.878s11.142 12.081 7.878 19.696zm115.583 110.804-75 60c-6.458 5.168-15.9 4.136-21.083-2.342-5.175-6.469-4.127-15.909 2.343-21.083l60.358-48.288-60.358-48.287c-6.47-5.175-7.518-14.614-2.343-21.083 5.174-6.469 14.614-7.518 21.083-2.342l75 60c7.499 5.997 7.504 17.423 0 23.425z'></path>
@@ -56,17 +66,17 @@ function Hero() {
                                 <div className='hidden sm:flex w-full consultancy-line' />
                             </div>
                             <div className='mt-3 sm:pe-8'>
-                                <time className='block text-center md:text-start mb-2 font-normal leading-none text-white'>
+                                <time className='block text-center md:text-start mb-5 md:mb-2 font-normal leading-none text-white'>
                                     <Trans>{t("Consultancy Through")}</Trans>
                                 </time>
-                                <p className='md:font-thin text-indigo-200'>
+                                <p className='md:font-normal text-white opacity-70 text-center md:text-start'>
                                     <Trans>{t("Consultancy Through description")}</Trans>
                                 </p>
                             </div>
                         </li>
                         <li className='relative mb-6 sm:mb-0'>
                             <div className='flex items-center justify-center'>
-                                <div className='z-10 flex items-center justify-center w-6 h-6 bg-white rounded-full ring-0 ring-white '>
+                                <div className='z-1 flex items-center justify-center w-6 h-6 bg-white rounded-full ring-0 ring-white '>
                                     <svg id='fi_7558195' viewBox='0 0 512 512' className='w-3.5 h-3.5 text-primary' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
                                         <g>
                                             <path d='m240.917 511.365v-212.993l-133.698 165.291c39.239 28.359 85.272 44.872 133.698 47.702z'></path>
@@ -83,10 +93,10 @@ function Hero() {
                                 <div className='hidden sm:flex w-full consultancy-line' />
                             </div>
                             <div className='mt-3 sm:pe-8'>
-                                <time className='block text-center md:text-start mb-2 font-normal leading-none text-white'>
+                                <time className='block text-center md:text-start mb-5 md:mb-2 font-normal leading-none text-white'>
                                     <Trans>{t("Consultancy End")}</Trans>
                                 </time>
-                                <p className='md:font-thin text-indigo-200'>
+                                <p className='md:font-normal text-white opacity-70 text-center md:text-start'>
                                     <Trans>{t("Consultancy End description")}</Trans>
                                 </p>
                             </div>
@@ -98,16 +108,94 @@ function Hero() {
                 </div>
             </section>
 
-            <section className='my-container'>
-                <div>
-                    <div className='gradient'>
-                        <div>
-                            <img src="../assets/about.png" alt="about 1" />
+            <section className='my-container about-section flex'>
+                <div className='gradient-container'>
+                    <div className='gradient'></div>
+                    <div className='flex flex-col lg:flex-row gap-24 items-center justify-center md:justify-between'>
+                        <img src={aboutImg} className='about-img inline-block lg:hidden' alt='about img' />
+                        <div className='flex flex-col items-center lg:items-start'>
+                            <h2 className='about-title text-center lg:text-justify text-white pb-4'>
+                                <Trans>{t("About Title")}</Trans>
+                            </h2>
+                            <div className='h-0.5 rounded-full bg-primary w-2/12'></div>
+                            <h4 className='text-white text-center lg:text-start font-semibold py-4'>
+                                <Trans>{t("About Small Title")}</Trans>
+                            </h4>
+                            <h5 className='about-description text-center text-white opacity-80 lg:text-justify pb-6'>
+                                <Trans>{t("About Description")}</Trans>
+                            </h5>
+
+                            <button className='primary-btn w-fit text-sm '>
+                                <Trans>{t("About Btn")}</Trans>
+                            </button>
                         </div>
-                        <div></div>
+                        <img src={aboutImg} className='about-img lg:inline-block hidden' alt='about img' />
                     </div>
                 </div>
-                <img src="./../assets/about.png" className="w-10 h-10" alt="about img" />
+            </section>
+
+            <section className='my-container about-section flex my-20 md:my-0'>
+                <div className='gradient-container-result '>
+                    <div className='gradient result-gradient'></div>
+                    <div className='flex flex-col lg:flex-row gap-10 md:gap-36 items-center justify-center md:justify-between'>
+                        <img src={resultImg} className='result-img' alt='about img' />
+                        <div className='flex flex-col items-center lg:items-start'>
+                            <h2 className='about-title text-center lg:text-justify text-white pb-4'>
+                                <Trans>{t("Result Title")}</Trans>
+                            </h2>
+                            <div className='h-0.5 rounded-full bg-primary w-2/12'></div>
+                            <h4 className='text-white text-center lg:text-start font-semibold py-4'>
+                                <Trans>{t("Result Small Title")}</Trans>
+                            </h4>
+                            <h5 className='about-description text-center text-white opacity-80 lg:text-justify pb-6'>
+                                <Trans>{t("Result Description")}</Trans>
+                            </h5>
+
+                            <button className='primary-btn w-fit text-sm '>
+                                <Trans>{t("Result Btn")}</Trans>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='py-20 min-h-screen'>
+                <div className='my-container'>
+                    <div className='grid grid-cols-5 gap-1 justify-center items-center'>
+                        <div className='h-60 col-span-2 flex flex-col gap-5 p-6 bg-transparent rounded-lg shadow'>
+                            <h2>{t("Tech Service")}</h2>
+                            <h5 className='text-justify'>منذ بدايتنا ونحن نسعى إلى أن نكون الوجهة الأولى لتطوير الأعمال؛ فصار فريقنا يضم نخبة في مختلف المجالات التي تلبي حاجة السوق والعميل، وهذه باقة خدماتنا الممية:</h5>
+                        </div>
+                        {cardsData.map((card, index) => (
+                            <div key={index} className='service-card flex gap-3 flex-col justify-center p-5 bg-indigo-900 rounded-md shadow'>
+                                <img src={card.img} alt={card.title} className='w-12 text-white' />
+                                <div className='flex flex-col justify-center'>
+                                    <a href={card.link}>
+                                        <h5 className='mb-2 tracking-tight text-white'>
+                                            <Trans>{t(card.title)}</Trans>
+                                        </h5>
+                                    </a>
+                                    <a href={card.link} className='flex gap-1 text-xs opacity-80 font-medium items-center hover:underline'>
+                                        <svg className='w-3 h-3 rtl:rotate-[270deg]' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 18 18'>
+                                            <path
+                                                stroke='currentColor'
+                                                strokeLinecap='round'
+                                                strokeLinejoin='round'
+                                                strokeWidth={2}
+                                                d='M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778'
+                                            />
+                                        </svg>
+                                        للمزيد من التفاصيل
+                                    </a>
+                                </div>
+
+                                {/* <li href={card.link} className='primary-btn list-none font-medium items-center'>
+                                    {t(card.buttonText)}
+                                </li> */}
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </section>
         </>
     );

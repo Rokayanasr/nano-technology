@@ -30,23 +30,23 @@ button {
     @apply text-white;
 }
 h1 {
-    @apply text-5xl font-bold leading-normal;
+    @apply text-4xl font-bold leading-normal;
 }
 h2 {
     @apply text-3xl font-bold my-1.5 leading-normal;
 }
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     @apply leading-normal;
 }
-h4{
-    font-size: 1rem;
+h4 , time{
+    font-size: 1.27rem;
 }
 h5{
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 p{
-    font-size: 1rem;
+    font-size: 1.15rem;
 }
 .my-container {
     @apply py-5 px-20;
@@ -65,7 +65,7 @@ p{
 }
 @media (max-width: 639px) {
     :root{
-        font-size: 14px;
+        font-size: 16px;
     }
     .my-container {
         @apply py-10 px-5;
