@@ -4,6 +4,7 @@ import cookies from "js-cookie";
 import "../App.css";
 import { useTranslation } from "react-i18next";
 import "../utils/i18n";
+import { Link } from "react-router-dom";
 
 function Navbar() {
     const { t } = useTranslation();
@@ -23,20 +24,19 @@ function Navbar() {
 
     return (
         <>
-            <nav className='bg-opacity-15 md:bg-opacity-15 my-container backdrop-blur-lg bg-white z-10 fixed w-full shadow-lg ring-1 ring-black/5'>
+            <nav className='bg-opacity-15 md:bg-opacity-15 my-container backdrop-blur-lg bg-white z-20 fixed w-full shadow-lg ring-1 ring-black/5'>
                 <div className='max-w-screen-xl flex flex-wrap items-center justify-between'>
-                    <a className='flex items-center space-x-3 rtl:space-x-reverse'>
+                    <Link to='' className='flex items-center space-x-3 rtl:space-x-reverse'>
                         <img src='../../src/assets/logo.png' className='h-12 sm:h-14' alt='project 12 Logo' />
                         <span className='flex flex-col gap-1.5 logo-hide'>
                             <span className=' text-white logo-nav uppercase'>{t("Logo name")}</span>
                             <span className='text-white text-opacity-70 text-sm font-thin logo-title uppercase'>{t("Logo description")}</span>
                         </span>
-                    </a>
+                    </Link>
                     <div className='flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse'>
                         <button
                             onClick={changeLanguage}
                             type='button'
-                            data-dropdown-toggle='language-dropdown-menu'
                             className='inline-flex items-center bg-primary hover:bg-phover outline outline-white outline-1 font-medium justify-center px-4 py-2 text-xs rounded-full cursor-pointer '
                         >
                             <img src={`../assets/${lng}.png`} alt='' />
@@ -58,29 +58,35 @@ function Navbar() {
                     </div>
                     <div className='items-center justify-between hidden w-full lg:flex md:w-auto md:order-1' id='navbar-language'>
                         <ul className='flex flex-col p-4 md:p-0 mt-4  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 '>
-                            <li className="nav-btn ">
-                                <a href='#' className='block py-5 nav-link px-3 md:p-0 text-xl uppercase rounded  md:hover:bg-transparent'>
+                            <li className='nav-btn '>
+                                <Link to='/' className='block py-5 nav-link px-3 md:p-0 text-xl uppercase rounded  md:hover:bg-transparent'>
+                                    {t("Home")}
+                                </Link>
+                                <div className='border-transparent element rounded-full'></div>
+                            </li>
+                            <li className='nav-btn '>
+                                <Link to='/aboutus' className='block py-5 nav-link px-3 md:p-0 text-xl uppercase rounded  md:hover:bg-transparent'>
                                     {t("About Us")}
-                                </a>
-                                <div className="border-transparent element rounded-full"></div>
+                                </Link>
+                                <div className='border-transparent element rounded-full'></div>
                             </li>
-                            <li className="nav-btn ">
-                                <a href='#' className='block py-5 nav-link px-3 md:p-0 text-xl uppercase rounded  md:hover:bg-transparent'>
+                            <li className='nav-btn '>
+                                <Link to='/service' className='block py-5 nav-link px-3 md:p-0 text-xl uppercase rounded  md:hover:bg-transparent'>
                                     {t("Services")}
-                                </a>
-                                <div className="border-transparent element rounded-full"></div>
+                                </Link>
+                                <div className='border-transparent element rounded-full'></div>
                             </li>
-                            <li className="nav-btn ">
-                                <a href='#' className='block py-5 nav-link px-3 md:p-0 text-xl uppercase rounded  md:hover:bg-transparent'>
+                            <li className='nav-btn'>
+                                <Link to='consultancy' className='block py-5 nav-link px-3 md:p-0 text-xl uppercase rounded  md:hover:bg-transparent'>
                                     {t("Subscribe")}
-                                </a>
-                                <div className="border-transparent element rounded-full"></div>
+                                </Link>
+                                <div className='border-transparent element rounded-full'></div>
                             </li>
-                            <li className="nav-btn ">
-                                <a href='#' className='block py-5 nav-link px-3 md:p-0 text-xl uppercase rounded  md:hover:bg-transparent'>
-                                {t("Contact Us")}
-                                </a>
-                                <div className="border-transparent element rounded-full"></div>
+                            <li className='nav-btn '>
+                                <Link to='contactus' className='block py-5 nav-link px-3 md:p-0 text-xl uppercase rounded  md:hover:bg-transparent'>
+                                    {t("Contact Us")}
+                                </Link>
+                                <div className='border-transparent element rounded-full'></div>
                             </li>
                         </ul>
                     </div>
