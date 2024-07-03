@@ -193,6 +193,39 @@
     background: linear-gradient(to bottom, #1d1452, #33106e0f);
 }
 
+
+/* =================WHY CHOSE US================= */
+.chooseus-img {
+    width: 250px;
+    position: relative; 
+    z-index: 2;
+    opacity: 1;
+    /* background: url(assets/chooseus.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+.chooseus-gradient{
+    position: absolute; /* Ensures the gradient is behind the image */
+    z-index: 0;
+    background-image: linear-gradient(#3216ead1, #755ae3);
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30%/ 30% 30% 70% 70%;
+    --size: 320px;
+    display: flex;
+    
+}
+.justtify-div{
+    justify-content: space-between !important;
+}
+.gradient-container-chooseus {
+    position: relative;
+    height: fit-content;
+    width: 100% ;
+    display: flex;
+    justify-content: center;
+}
+
 /* ================= Animations ================= */
 .bounce-top {
     -webkit-animation: bounce-top 0.9s both;
@@ -374,7 +407,8 @@
         animation-timing-function: ease-out;
     }
 }
-
+.tracking-in-expand{-webkit-animation:tracking-in-expand 1s ease-in-out infinite alternate-reverse both;animation:tracking-in-expand 1s ease-in-out infinite alternate-reverse both}
+@-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
 @media (max-width: 639px) {
     .logo-hide {
         display: none !important;

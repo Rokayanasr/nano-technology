@@ -5,6 +5,7 @@ import resultImg from "../assets/results.png";
 import Service from "./Service";
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import WhyChoseUs from "./WhyChoseUs";
 
 function Hero() {
     const { t, i18n } = useTranslation();
@@ -236,6 +237,8 @@ function Hero() {
                     </>
                 </div>
             </section>
+
+            <WhyChoseUs />
         </>
     );
 }
