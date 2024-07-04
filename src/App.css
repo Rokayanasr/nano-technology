@@ -11,9 +11,9 @@ body ::selection {
     background: #38c2ee;
     color: white;
 }
-.logo-title {
+/* .logo-title {
     @apply tracking-widest;
-}
+} */
 .element {
     width: 10px;
     border-radius: 20px;
@@ -48,8 +48,7 @@ body ::selection {
     justify-content: center;
     align-items: center;
 }
-.nav-blur {
-}
+
 @media (max-width: 768px) {
     .hero-bg {
         background: url("./assets/hero-bg.png") !important;
@@ -239,13 +238,13 @@ body ::selection {
     justify-content: center;
 }
 /* ==================contactus=================== */
-*,
+/* *,
 *:before,
 *:after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 .background {
     display: flex;

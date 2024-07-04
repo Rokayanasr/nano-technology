@@ -1,4 +1,5 @@
 import { Trans, useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function Consultancy() {
     const { t, i18n } = useTranslation();
@@ -77,9 +78,11 @@ function Consultancy() {
                         </div>
                     </li>
                 </ol>
-                <button className='heartbeat primary-outline-btn'>
-                    <Trans>{t("Consultancy Btn")}</Trans>
-                </button>
+                <Link to='/contactus'>
+                    <button className='heartbeat primary-outline-btn'>
+                        <Trans>{t("Consultancy Btn")}</Trans>
+                    </button>
+                </Link>
             </div>
         </section>
     );

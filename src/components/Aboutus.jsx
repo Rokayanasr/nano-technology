@@ -1,6 +1,7 @@
 import React from "react";
 import aboutImg from "../assets/about.png";
 import { Trans, useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function Aboutus() {
     const { t, i18n } = useTranslation();
@@ -23,9 +24,11 @@ function Aboutus() {
                             <Trans>{t("About Description")}</Trans>
                         </h5>
 
-                        <button className='primary-btn w-fit text-sm '>
-                            <Trans>{t("About Btn")}</Trans>
-                        </button>
+                        <Link to="/service">
+                            <button className='primary-btn w-fit text-sm '>
+                                <Trans>{t("About Btn")}</Trans>
+                            </button>
+                        </Link>
                     </div>
                     <img src={aboutImg} className='about-img lg:inline-block hidden' alt='about img' />
                 </div>
