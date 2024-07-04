@@ -24,7 +24,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className='bg-opacity-30 nav-blur md:bg-opacity-15 my-container backdrop-blur-lg bg-white z-20 fixed w-full shadow-lg ring-1 ring-black/5'>
+            <nav className='bg-opacity-30 nav-blur md:bg-opacity-20 my-container backdrop-blur-lg bg-white z-20 fixed w-full shadow-lg ring-1 ring-black/5'>
                 <div className='max-w-screen-xl flex flex-wrap items-center justify-between'>
                     <Link to='' className='flex items-center space-x-3 rtl:space-x-reverse'>
                         <img src={logo} className='h-12 sm:h-14' alt='nano Logo' />

@@ -80,10 +80,10 @@ function Contactus() {
                         </div>
                     </div>
                 </div>
-                <div className='footer bg-dark'>
+                <div className='footer bg-opacity-30 nav-blur md:bg-opacity-30 my-container backdrop-blur-lg bg-white'>
                     <div className='footer-top'></div>
                     <div className='flex justify-center items-center'>
-                        <p>�� 2023 Nano Technology. All rights reserved.</p>
+                        <p>2024 Nano Technology. All rights reserved ©</p>
                     </div>
                 </div>
             </div>
