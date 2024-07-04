@@ -5,6 +5,7 @@ import img2 from "../assets/designer.svg";
 import img3 from "../assets/setting.svg";
 import img4 from "../assets/gear.svg";
 import img5 from "../assets/digitalization.svg";
+import { Link } from "react-router-dom";
 
 function TechicalService() {
     const { t, i18n } = useTranslation();
@@ -34,7 +35,7 @@ function TechicalService() {
                             <h5 className='mb-4 text-justify text-md sm:text-sm text-white'>
                                 <Trans>{t(card.description)}</Trans>
                             </h5>
-                            <a href={card.link} className='flex gap-1 text-md sm:text-sm font-semibold text-secondary items-center hover:underline'>
+                            <Link to="/contactus" className='flex gap-1 text-md sm:text-sm font-semibold text-secondary items-center hover:underline'>
                                 <svg className='w-3 h-3 rtl:rotate-[270deg]' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 18 18'>
                                     <path
                                         stroke='currentColor'
@@ -45,7 +46,7 @@ function TechicalService() {
                                     />
                                 </svg>
                                 {t(card.buttonText)}
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 ))}

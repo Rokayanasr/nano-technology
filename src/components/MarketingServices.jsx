@@ -36,7 +36,7 @@ function MarketingServices() {
                             <h5 className='mb-4 text-justify text-md sm:text-sm text-white'>
                                 <Trans>{t(card.description)}</Trans>
                             </h5>
-                            <a href={card.link} className='flex gap-1 text-md sm:text-sm font-semibold text-secondary items-center hover:underline'>
+                            <Link to="/contactus" className='flex gap-1 text-md sm:text-sm font-semibold text-secondary items-center hover:underline'>
                                 <svg className='w-3 h-3 rtl:rotate-[270deg]' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 18 18'>
                                     <path
                                         stroke='currentColor'
@@ -47,7 +47,7 @@ function MarketingServices() {
                                     />
                                 </svg>
                                 {t(card.buttonText)}
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 ))}
