@@ -1,10 +1,23 @@
 import { Trans, useTranslation } from "react-i18next";
 import { Link, Outlet } from "react-router-dom";
+import img1 from "../assets/online-marketing.svg";
+import img2 from "../assets/social-media.svg";
+import img3 from "../assets/headphone.svg";
+import img4 from "../assets/creative-work.svg";
+import img5 from "../assets/pen-tablet.svg";
+import img6 from "../assets/palette.svg";
 
 function MarketingServices() {
     const { t, i18n } = useTranslation();
     const cardsData = t("MarketingCard", { returnObjects: true });
-
+    const images = [
+        img1, 
+        img2, 
+        img3,
+        img4,
+        img5,
+        img6
+    ];
     return (
         <div className='flex justify-center items-center flex-col'>
             <div className=' text-center gap-5 p-6 bg-transparent rounded-lg shadow'>
@@ -14,7 +27,7 @@ function MarketingServices() {
                 {cardsData.map((card, index) => (
                     <div key={index} className='service-card flex sm:gap-3 gap-4 flex-col justify-center sm:justify-around px-4 sm:p-10 rounded-lg shadow'>
                         <div className='flex items-center gap-4'>
-                            <img src={card.img} alt={card.title} className='w-10 text-white' />
+                            <img src={images[index]} alt={card.title} className='w-10 text-white' />
                             <h4 className='text-white font-bold'>
                                 <Trans>{t(card.title)}</Trans>
                             </h4>

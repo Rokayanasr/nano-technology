@@ -4,7 +4,7 @@ import img1 from "../assets/cpu.svg";
 import img2 from "../assets/designer.svg";
 import img3 from "../assets/setting.svg";
 import img4 from "../assets/gear.svg";
-import img5 from "../assets/setting.svg";
+import img5 from "../assets/digitalization.svg";
 
 function TechicalService() {
     const { t, i18n } = useTranslation();
