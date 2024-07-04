@@ -14,7 +14,7 @@ body {
 }
 
 :root{
-    --primary: #785EE6;
+    --primary: #7467FD;
     /* --primary: #5138EE; */
 }
 
@@ -68,7 +68,7 @@ p{
         font-size: 16px;
     }
     .my-container {
-        @apply py-10 px-5;
+        @apply py-5 px-5;
     }
 }
 

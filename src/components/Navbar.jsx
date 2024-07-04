@@ -24,13 +24,13 @@ function Navbar() {
 
     return (
         <>
-            <nav className='bg-opacity-25 md:bg-opacity-15 my-container backdrop-blur-xl bg-white z-20 fixed w-full shadow-lg ring-1 ring-black/5'>
+            <nav className='z-20 fixed w-full my-container glass'>
                 <div className='max-w-screen-xl flex flex-wrap items-center justify-between'>
                     <Link to='' className='flex items-center space-x-3 rtl:space-x-reverse'>
-                        <img src={logo} className='h-12 sm:h-14' alt='project 12 Logo' />
-                        <span className='flex flex-col gap-1.5 logo-hide'>
+                        <img src={logo} className='h-12 sm:h-14' alt='nano Logo' />
+                        <span className='sm:flex hidden flex-col gap-1.5 logo-hide'>
                             <span className=' text-white logo-nav uppercase'>{t("Logo name")}</span>
-                            <span className='text-white text-opacity-70 text-sm font-thin logo-title uppercase'>{t("Logo description")}</span>
+                            <span className='text-white text-opacity-70 text-sm font-semibold logo-title uppercase'>{t("Logo description")}</span>
                         </span>
                     </Link>
                     <div className='flex items-center md:order-2 space-x-1 gap-6 md:space-x-0 rtl:space-x-reverse'>

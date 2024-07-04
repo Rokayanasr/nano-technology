@@ -9,7 +9,7 @@ i18n
     .use(HttpApi)
     .init({
         // lng: "ar", //to set the main language but if using lang detector i'm not using it
-        fallbackLng: "en", //default
+        fallbackLng: "ar", //default
         detection: {
         order: [
             "cookie",
