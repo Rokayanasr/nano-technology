@@ -10,6 +10,7 @@ import Contactus from "./Contactus";
 import Consultancy from "./Consultancy";
 import Aboutus from "./Aboutus";
 import TechicalService from "./TechicalService";
+import MarketingServices from "./MarketingServices";
 
 function Hero() {
     const { t, i18n } = useTranslation();
@@ -104,7 +105,7 @@ function Hero() {
                             </li>
                         </ul>
                         <Outlet />
-                        <TechicalService className={isClicked == true ? "hidden" : "flex"}></TechicalService>
+                        <MarketingServices className={isClicked == true ? "hidden" : "flex"}></MarketingServices>
                     </>
                 </div>
             </section>
