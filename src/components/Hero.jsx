@@ -1,6 +1,5 @@
 import { Trans, useTranslation } from "react-i18next";
 import "../App.css";
-import aboutImg from "../assets/about.png";
 import resultImg from "../assets/results.png";
 import Service from "./Service";
 import { useState } from "react";
@@ -30,7 +29,7 @@ function Hero() {
                             <Trans i18nKey='Welcome to Nano Technology' />
                         </h1>
                         <Link to='/service'>
-                            <button className='primary-btn'>{t("Hero Btn")}</button>
+                            <button className='bounce-top primary-btn'>{t("Hero Btn")}</button>
                         </Link>
                     </div>
                 </main>

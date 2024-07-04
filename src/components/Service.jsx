@@ -32,7 +32,7 @@ function Service() {
                         <li className='w-full flex justify-center sm:justify-end tab-focus focus-within:z-10'>
                             <Link
                                 to='/service/technical'
-                                className='inline-block w-96 sm:w-8/12 p-4 border focus:font-bold text-white bg-primary sm:rounded-s-lg focus:bg-white focus:text-primary active focus:border focus:border-white focus:outline-none '
+                                className='inline-block w-96 sm:w-8/12 p-4 border focus:font-bold text-white bg-primary sm:rounded-s-lg focus:border-4 focus:bg-white focus:text-primary active focus:border-pdark focus:outline-none '
                                 aria-current='page'
                             >
                                 {t("Technical Services")}
@@ -41,7 +41,7 @@ function Service() {
                         <li className='w-full flex justify-center sm:justify-start tab-focus focus-within:z-10'>
                             <Link
                                 to='/service/marketing'
-                                className='inline-block w-96 sm:w-8/12 p-4 focus:font-bold text-white border bg-primary sm:rounded-l-lg focus:border-pdark focus:bg-white focus:text-primary active focus:border  focus:outline-white '
+                                className='inline-block w-96 sm:w-8/12 p-4 focus:font-bold text-white border bg-primary sm:rounded-l-lg focus:border-pdark focus:bg-white focus:text-primary active focus:border-4 focus:outline-white '
                             >
                                 {t("Marketing Services")}
                             </Link>
