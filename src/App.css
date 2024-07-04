@@ -85,14 +85,14 @@ body ::selection {
 }
 
 /* ================= About Us ================= */
-/* @keyframes rotate {
+@keyframes rotate {
     0% {
         transform: rotate(0deg)
     }
     100% {
         transform: rotate(360deg);
     }
-} */
+}
 
 .gradient-container {
     position: relative;
@@ -111,7 +111,7 @@ body ::selection {
     filter: blur(calc(var(--size) / 5));
     overflow: hidden;
     background-image: linear-gradient(#3216ead1, #755ae3);
-    /* animation: rotate var(--speed) var(--easing) alternate infinite; */
+    animation: rotate var(--speed) var(--easing) alternate infinite;
     border-radius: 30% 70% 70% 30%/ 30% 30% 70% 70%;
     position: absolute; /* Ensures the gradient is behind the image */
     z-index: 0; /* Ensure the gradient is behind the image */
@@ -651,3 +651,4 @@ body ::selection {
         animation-timing-function: ease-out;
     }
 }
+

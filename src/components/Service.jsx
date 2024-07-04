@@ -28,7 +28,7 @@ function Service() {
                             <option>{t("Marketing Services")}</option>
                         </select>
                     </div>
-                    <ul className='block text-md text-center text-white rounded-lg shadow sm:flex'>
+                    <ul className='block text-md text-center text-white rounded-lg sm:flex'>
                         <li className='w-full flex justify-center sm:justify-end tab-focus focus-within:z-10'>
                             <Link
                                 to='/service/technical'
