@@ -1,10 +1,21 @@
 import { Trans, useTranslation } from "react-i18next";
 import "../App.css";
+import img1 from "../assets/cpu.svg";
+import img2 from "../assets/designer.svg";
+import img3 from "../assets/setting.svg";
+import img4 from "../assets/gear.svg";
+import img5 from "../assets/setting.svg";
 
 function TechicalService() {
     const { t, i18n } = useTranslation();
     const cardsData = t("Cards", { returnObjects: true });
-
+    const images = [
+        img1, 
+        img2, 
+        img3,
+        img4,
+        img5
+    ];
     return (
         <div className='flex justify-center items-center flex-col'>
             <div className=' text-center gap-5 p-6 bg-transparent rounded-lg shadow'>
@@ -14,7 +25,7 @@ function TechicalService() {
                 {cardsData.map((card, index) => (
                     <div key={index} className='service-card flex sm:gap-3 gap-4 flex-col justify-center sm:justify-around px-4 sm:p-10 rounded-lg shadow'>
                         <div className='flex items-center gap-4'>
-                            <img src={card.img} alt={card.title} className='w-10 text-white' />
+                            <img src={images[index]} alt={card.title} className='w-10 text-white' />
                             <h4 className='text-white font-bold'>
                                 <Trans>{t(card.title)}</Trans>
                             </h4>
