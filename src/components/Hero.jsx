@@ -6,6 +6,7 @@ import Service from "./Service";
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import WhyChoseUs from "./WhyChoseUs";
+import Contactus from "./Contactus";
 
 function Hero() {
     const { t, i18n } = useTranslation();
@@ -239,6 +240,8 @@ function Hero() {
             </section>
 
             <WhyChoseUs />
+
+            <Contactus />
         </>
     );
 }
