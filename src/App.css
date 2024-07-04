@@ -172,7 +172,7 @@ body ::selection {
 @media (max-width: 768px) {
     .service-card {
         width: fit-content;
-        height: 420px;
+        height: 400px;
     }
 }
 /* ========================Tabs================= */

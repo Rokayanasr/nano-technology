@@ -33,7 +33,7 @@ function MarketingServices() {
                             </h4>
                         </div>
                         <div className='flex flex-col justify-center'>
-                            <h5 className='mb-4 text-justify text-lg sm:text-sm text-white'>
+                            <h5 className='mb-4 text-justify text-md sm:text-sm text-white'>
                                 <Trans>{t(card.description)}</Trans>
                             </h5>
                             <a href={card.link} className='flex gap-1 text-md sm:text-sm font-semibold text-secondary items-center hover:underline'>
