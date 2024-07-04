@@ -5,7 +5,7 @@ import "../App.css";
 import { useTranslation } from "react-i18next";
 import "../utils/i18n";
 import { Link } from "react-router-dom";
-import logo from '../assets/logo.png'
+import logo from "../assets/logo.png";
 function Navbar() {
     const { t } = useTranslation();
 
@@ -24,7 +24,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className='bg-opacity-15 md:bg-opacity-15 my-container backdrop-blur-lg bg-white z-20 fixed w-full shadow-lg ring-1 ring-black/5'>
+            <nav className='bg-opacity-25 md:bg-opacity-15 my-container backdrop-blur-xl bg-white z-20 fixed w-full shadow-lg ring-1 ring-black/5'>
                 <div className='max-w-screen-xl flex flex-wrap items-center justify-between'>
                     <Link to='' className='flex items-center space-x-3 rtl:space-x-reverse'>
                         <img src={logo} className='h-12 sm:h-14' alt='project 12 Logo' />
@@ -33,7 +33,7 @@ function Navbar() {
                             <span className='text-white text-opacity-70 text-sm font-thin logo-title uppercase'>{t("Logo description")}</span>
                         </span>
                     </Link>
-                    <div className='flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse'>
+                    <div className='flex items-center md:order-2 space-x-1 gap-6 md:space-x-0 rtl:space-x-reverse'>
                         <button
                             onClick={changeLanguage}
                             type='button'
@@ -44,19 +44,19 @@ function Navbar() {
                         </button>
 
                         <button
-                            data-collapse-toggle='navbar-language'
+                            data-collapse-toggle='navbar-default'
                             type='button'
-                            className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:ring-1 focus:outline-none ring-white'
-                            aria-controls='navbar-language'
+                            className='inline-flex items-center p-2 w-10 h-10 justify-center text-lg text-white rounded-lg md:hidden focus:ring-1 focus:outline-none ring-white'
+                            aria-controls='navbar-default'
                             aria-expanded='false'
                         >
                             <span className='sr-only'>Open main menu</span>
-                            <svg className='w-5 h-5' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 17 14'>
+                            <svg className='w-10 h-6' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 17 14'>
                                 <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M1 1h15M1 7h15M1 13h15' />
                             </svg>
                         </button>
                     </div>
-                    <div className='items-center justify-between hidden w-full lg:flex md:w-auto md:order-1' id='navbar-language'>
+                    <div className='items-center justify-between hidden w-full lg:flex md:w-auto md:order-1' id='navbar-default'>
                         <ul className='flex flex-col p-4 md:p-0 mt-4  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 '>
                             <li className='nav-btn '>
                                 <Link to='/' className='block py-5 nav-link px-3 md:p-0 text-xl uppercase rounded  md:hover:bg-transparent'>

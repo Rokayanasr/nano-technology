@@ -165,8 +165,8 @@ function Hero() {
                         <h2 className='text-center'>
                             <Trans>{t("Solutions and services")}</Trans>
                         </h2>
-                        <h5 className='text-center pt-3 pb-5 leading-7 w-8/12'>{t("Solutions and services small title")}</h5>
-                    </div>
+                        <h5 className='text-center pt-3 pb-5 leading-7 w-full sm:w-8/12'>{t("Solutions and services small title")}</h5>
+                        </div>
                     <>
                         <div className='hidden'>
                             <label htmlFor='tabs' className='sr-only'>
@@ -184,7 +184,7 @@ function Hero() {
                             <li onClick={handleClick} className='w-full flex justify-center tabs focus-within:z-0 sm:justify-end tab-focus'>
                                 <Link
                                     to='/service/technical'
-                                    className='inline-block w-8/12 p-4 border focus:font-bold text-white bg-primary rounded-s-lg focus:bg-white focus:text-primary active focus:border focus:border-white focus:outline-none '
+                                    className='inline-block w-96 sm:w-8/12 p-4 border focus:font-bold text-white bg-primary sm:rounded-s-lg focus:bg-white focus:text-primary active focus:border focus:border-white focus:outline-none '
                                     aria-current='page'
                                 >
                                     {t("Technical Services")}
@@ -193,20 +193,20 @@ function Hero() {
                             <li onClick={handleClick} className='w-full focus-within:z-0 tabs flex justify-center sm:justify-start tab-focus '>
                                 <Link
                                     to='/service/marketing'
-                                    className='inline-block w-8/12 p-4 focus:font-bold text-white border bg-primary rounded-l-lg focus:border-pdark focus:bg-white focus:text-primary active focus:border  focus:outline-white '
-                                >
+                                    className='inline-block w-96 sm:w-8/12 p-4 focus:font-bold text-white border bg-primary sm:rounded-l-lg focus:border-pdark focus:bg-white focus:text-primary active focus:border  focus:outline-white '
+                                    >
                                     {t("Marketing Services")}
                                 </Link>
                             </li>
                         </ul>
                         <Outlet />
-                        <div className={`justify-center items-center flex-col ${isClicked == true ? 'hidden' : 'flex'}`}>
+                        <div className={`justify-center items-center flex-col ${isClicked == true ? "hidden" : "flex"}`}>
                             <div className=' text-center gap-5 p-6 bg-transparent rounded-lg shadow'>
                                 <h2>{t("Technical Services")}</h2>
                             </div>
                             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center place-content-center items-center'>
                                 {cardsData.map((card, index) => (
-                                    <div key={index} className='service-card flex gap-3 flex-col justify-around p-10 rounded-lg shadow'>
+                                    <div key={index} className='service-card flex sm:gap-3 gap-4 flex-col justify-center sm:justify-around px-4 sm:p-10 rounded-lg shadow'>
                                         <div className='flex items-center gap-4'>
                                             <img src={card.img} alt={card.title} className='w-10 text-white' />
                                             <h4 className='text-white font-bold'>
@@ -214,10 +214,10 @@ function Hero() {
                                             </h4>
                                         </div>
                                         <div className='flex flex-col justify-center'>
-                                            <h5 className='mb-4 text-justify text-xs text-white'>
+                                            <h5 className='mb-4 text-justify text-lg sm:text-sm text-white'>
                                                 <Trans>{t(card.description)}</Trans>
                                             </h5>
-                                            <a href={card.link} className='flex gap-1 text-xs font-semibold text-secondary items-center hover:underline'>
+                                            <a href={card.link} className='flex gap-1 text-md sm:text-sm font-semibold text-secondary items-center hover:underline'>
                                                 <svg className='w-3 h-3 rtl:rotate-[270deg]' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 18 18'>
                                                     <path
                                                         stroke='currentColor'

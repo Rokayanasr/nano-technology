@@ -12,7 +12,7 @@ function TechicalService() {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center place-content-center items-center'>
                 {cardsData.map((card, index) => (
-                    <div key={index} className='service-card flex gap-3 flex-col justify-around p-10 rounded-lg shadow'>
+                    <div key={index} className='service-card flex sm:gap-3 gap-4 flex-col justify-center sm:justify-around px-4 sm:p-10 rounded-lg shadow'>
                         <div className='flex items-center gap-4'>
                             <img src={card.img} alt={card.title} className='w-10 text-white' />
                             <h4 className='text-white font-bold'>
@@ -20,10 +20,10 @@ function TechicalService() {
                             </h4>
                         </div>
                         <div className='flex flex-col justify-center'>
-                            <h5 className='mb-4 text-justify text-xs text-white'>
+                            <h5 className='mb-4 text-justify text-lg sm:text-sm text-white'>
                                 <Trans>{t(card.description)}</Trans>
                             </h5>
-                            <a href={card.link} className='flex gap-1 text-xs font-semibold text-secondary items-center hover:underline'>
+                            <a href={card.link} className='flex gap-1 text-md sm:text-sm font-semibold text-secondary items-center hover:underline'>
                                 <svg className='w-3 h-3 rtl:rotate-[270deg]' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 18 18'>
                                     <path
                                         stroke='currentColor'

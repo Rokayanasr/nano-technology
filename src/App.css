@@ -44,7 +44,16 @@
     justify-content: center;
     align-items: center;
 }
+@media (max-width:768px) {
+    .hero-bg{
+        background: url("./assets/hero-bg.png") !important;
+        background-position: center right !important;
 
+        
+        
+    }
+
+}
 .hero-content {
     /* Frame 13 */
 
@@ -159,7 +168,12 @@
     opacity: 0.8;
     background: linear-gradient(to bottom, #1d1452, #33106e0f);
 }
-
+@media (max-width: 768px) {
+    .service-card {
+        width: fit-content;
+        height: 400px;
+    }
+}
 /* ========================Tabs================= */
 .tab-focus{
     width: 100%;
@@ -177,6 +191,20 @@
  {
     /* transform: scale(1.05); */
     opacity: 1;
+}
+
+/* =====================Marketing================= */
+.marketing-card{
+    width: 300px;
+    height: 350px;
+    background: linear-gradient(to bottom, #31175d0f, #1d1553);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+.marketing-card:hover {
+    transform: scale(1.01);
+    opacity: 0.8;
+    background: linear-gradient(to bottom, #1d1452, #33106e0f);
 }
 
 /* =====================Marketing================= */
@@ -405,15 +433,5 @@
         transform: scale(1);
         -webkit-animation-timing-function: ease-out;
         animation-timing-function: ease-out;
-    }
-}
-.tracking-in-expand{-webkit-animation:tracking-in-expand 1s ease-in-out infinite alternate-reverse both;animation:tracking-in-expand 1s ease-in-out infinite alternate-reverse both}
-@-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
-@media (max-width: 639px) {
-    .logo-hide {
-        display: none !important;
-    }
-    .consultancy-small-title {
-        width: 100%;
     }
 }

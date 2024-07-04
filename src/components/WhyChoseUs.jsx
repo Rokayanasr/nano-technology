@@ -18,11 +18,11 @@ function WhyChoseUs() {
                                     fill='#b8aff0'
                                 />
                             </svg>
-                            <h4 className='text-white text-center tracking-wide sm:w-40'>{t("Card3")}</h4>
+                            <h4 className='text-white sm:text-center tracking-wide sm:w-40'>{t("Card3")}</h4>
                         </div>
                     </div>
                     
-                    <div className='flex flex-col gap-32'>
+                    <div className='flex flex-col gap-4 sm:gap-32'>
                         <div className='flex gap-4 justify-between'>
                             <svg className='w-6' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'>
                                 <path
@@ -30,7 +30,7 @@ function WhyChoseUs() {
                                     fill='#b8aff0'
                                 />
                             </svg>
-                            <h4 className='text-white text-start tracking-wide sm:w-40'>{t("Card1")}</h4>
+                            <h4 className='text-white text-star sm:pt-0 pt-4 tracking-wide sm:w-40'>{t("Card1")}</h4>
                         </div>
                         <div className='flex gap-4 justify-between'>
                             <svg xmlns='http://www.w3.org/2000/svg' className='w-6' width='35' height='35' viewBox='0 0 35 35' fill='none'>
@@ -58,7 +58,7 @@ function WhyChoseUs() {
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <h4 className='text-white text-start tracking-wide sm:w-40'>{t("Card2")}</h4>
+                            <h4 className='text-white text-start pb-4 sm:pb-0 tracking-wide sm:w-40'>{t("Card2")}</h4>
                         </div>
                     </div>
                     {/* ==============card 1============= */}
@@ -75,7 +75,7 @@ function WhyChoseUs() {
                         </div>
                     </div>
                     {/* ==============card 2============= */}
-                    <div className='flex flex-col gap-32'>
+                    <div className='flex flex-col gap-4 sm:gap-32'>
                         <div className='flex gap-4 justify-between'>
                             <svg xmlns='http://www.w3.org/2000/svg' className='w-6' width='34' height='34' viewBox='0 0 34 34' fill='none'>
                                 <path
