@@ -423,7 +423,11 @@ body ::selection {
     /* Dark */
     border-radius: 45px 45px 0px 0px;
 }
-
+@media (max-width: 580px) {
+    .footer{
+        border-radius: 0;
+    }
+}
 .footer-top {
     display: flex;
     flex-direction: column;
