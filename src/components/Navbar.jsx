@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import "../utils/i18n";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+
 function Navbar() {
     const { t } = useTranslation();
 
