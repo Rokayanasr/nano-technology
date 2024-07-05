@@ -52,7 +52,9 @@ body ::selection {
 @media (max-width: 768px) {
     .hero-bg {
         background: url("./assets/hero-bg.png") !important;
-        background-position: center right !important;
+        background-position: bottom 100px left -170px !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
     }
 }
 .hero-content {
